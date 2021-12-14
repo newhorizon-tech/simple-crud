@@ -1,1 +1,13 @@
-<h1> Notes </h1> 
+<h1>
+  Notes
+</h1>
+
+<%= render partial: 'form'%>
+
+<ul id="notes-display">
+  <% @notes.each do |note| %>
+    <li>
+      <%= note.title %>
+    </li>
+  <% end %>
+</ul>
