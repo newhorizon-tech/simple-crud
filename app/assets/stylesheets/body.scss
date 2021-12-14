@@ -1,0 +1,30 @@
+body {
+  margin: 0 2%;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: grey;
+    text-decoration: none;
+  }
+
+  hr {
+    border-top: 1px solid #343a40;
+  }
+
+  .jumbotron {
+    padding: 1%;
+    margin: 0;
+  }
+
+  .flash-msg {
+    padding: 1%;
+  }
+
+  header {
+    margin-bottom: 1%;
+  }
+}

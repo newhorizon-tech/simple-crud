@@ -1,0 +1,8 @@
+<h2> <%= @note.title %> </h2>
+
+<p> <%= @note.description %> </p>
+
+<div class="edit-buttons">
+<%= link_to "Edit", edit_note_path(@note), :class => 'btn btn-primary' %>
+<%= button_to "Delete", @note, :method => :delete, :class => 'btn btn-secondary' %>
+</div>

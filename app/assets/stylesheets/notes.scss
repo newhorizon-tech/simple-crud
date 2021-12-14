@@ -2,22 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-form {
-  width: 50%;
+#notes-display{
+  width: 90%;
+  margin: 5% auto;
+  margin-top: 4%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 }
 
-
-li {
+.buttons {
   display: flex;
-  flex-direction: row ;
+  justify-content: space-around;
 }
 
-li form {
-  width: auto;
+.card {
+  width: 250px;
+  text-align: center;
 }
 
-.btn-delete {
-  width: 50px;
+.edit-buttons {
+  display: flex;
+  justify-content: flex-start;
 }

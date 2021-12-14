@@ -1,21 +1,14 @@
-<h1>
-  Notes
-</h1>
-
-<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-    Tooltip on top
-</button>
-
-
-<%= render partial: 'form' %>
-
-<ul id="notes-display">
+<div id="notes-display">
   <% @notes.each do |note| %>
-    <li>
-      <%= note.title %>
-      <%= link_to "edit", edit_note_path(note), :class => 'btn-delete' %>
-      <%= button_to "delete", note, :method => :delete, :class => 'btn-delete' %>
-    </li>
-
+    <div class="card shadow rounded">
+      <div class="card-body">
+        <%= link_to note.title, note_path(note) %>
+        <hr class="hr-light">
+        <div class="buttons d-flex">
+        <%= link_to "Edit", edit_note_path(note), :class => 'btn btn-primary' %>
+        <%= button_to "Delete", note, :method => :delete, :class => 'btn btn-secondary' %>
+         </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
