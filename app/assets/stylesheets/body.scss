@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 0 2%;
+  margin: 0;
 
   a {
     color: black;
@@ -20,12 +20,7 @@ body {
     border-top: 1px solid #343a40;
   }
 
-  .jumbotron {
-    padding: 1%;
-    margin: 0;
-  }
-
-  .flash-msg {
+  #flash-msg {
     padding: 1%;
   }
 

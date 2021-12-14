@@ -13,13 +13,20 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(notes_params)
-    @note.save
-    redirect_to @note
+    if @note.save
+      flash.notice = "Note #{@note.title} has been created successfully!"
+      redirect_to @note
+    else
+      flash.alert = @note.errors.full_messages.to_sentence
+      render :new
+    end
   end
 
   def destroy
     @note = Note.find(params[:id])
     @note.destroy
+    flash.notice = "Note #{@note.title} has been deleted successfully!"
+
     redirect_to root_path
   end
 
@@ -29,8 +36,13 @@ class NotesController < ApplicationController
 
   def update
     @note = Note.find(params[:id])
-    @note.update(notes_params)
-    redirect_to @note
+    if @note.update(notes_params)
+      flash.notice = "Note #{@note.title} has been updated successfully!"
+      redirect_to @note
+    else
+      flash.alert = @note.errors.full_messages.to_sentence
+      render :edit
+    end
   end
 
   private
