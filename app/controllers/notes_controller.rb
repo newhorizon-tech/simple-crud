@@ -16,6 +16,17 @@ class NotesController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def edit
+    @note = Note.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    @note.update(notes_params)
+    redirect_to root_path
+  end
+
   private
   def notes_params
     params.require(:note).permit(:title, :description)

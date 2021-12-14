@@ -2,13 +2,13 @@
   Notes
 </h1>
 
-<%= render partial: 'form'%>
+<%= render partial: 'form' %>
 
 <ul id="notes-display">
   <% @notes.each do |note| %>
     <li>
       <%= note.title %>
-      <%= button_to "edit", note, :method => :delete, :class => 'btn-delete' %>
+      <%= link_to "edit", edit_note_path(note), :class => 'btn-delete' %>
       <%= button_to "delete", note, :method => :delete, :class => 'btn-delete' %>
     </li>
 

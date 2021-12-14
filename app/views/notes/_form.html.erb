@@ -1,7 +1,7 @@
-<%= form_with(model: @note, url: notes_path) do |form| %>
+<%= form_with(model: @note) do |form| %>
   <%= form.label :title, "Title" %>
   <%= form.text_field :title %>
   <%= form.label :description, "Description" %>
   <%= form.text_area :description %>
-  <%= form.submit 'Create Note' %>
+  <%= form.submit %>
 <% end %>
