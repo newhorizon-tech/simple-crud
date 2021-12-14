@@ -8,6 +8,9 @@
   <% @notes.each do |note| %>
     <li>
       <%= note.title %>
+      <%= button_to "edit", note, :method => :delete, :class => 'btn-delete' %>
+      <%= button_to "delete", note, :method => :delete, :class => 'btn-delete' %>
     </li>
+
   <% end %>
 </ul>

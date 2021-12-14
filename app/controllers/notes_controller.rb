@@ -7,6 +7,13 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(notes_params)
     @note.save
+    redirect_back(fallback_location: root_path)
+  end
+
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_back(fallback_location: root_path)
   end
 
   private
