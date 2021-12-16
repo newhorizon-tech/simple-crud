@@ -1,0 +1,13 @@
+<div class="input-form">
+<%= form_with(model: @note) do |form| %>
+  <div class="mb-3">
+    <%= form.label :title, "Title", { class: "form-label"} %>
+    <%= form.text_field :title, { class: "form-control note-title-input", placeholder: "Note Title" } %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :description, "Description", { class: "form-label"} %>
+    <%= form.text_area :description, { class: "form-control", placeholder: "Note Description" } %>
+  </div>
+  <%= form.submit %>
+<% end %>
+</div>

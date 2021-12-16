@@ -1,0 +1,27 @@
+// Place all the styles related to the Notes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#notes-display {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width: 250px;
+  text-align: center;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+form .note-title-input {
+  width: 50%;
+}

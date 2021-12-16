@@ -1,0 +1,9 @@
+<%  unless flash.empty? %>
+    <div class="lead">
+      <% flash.each do |type, msg| %>
+        <div id="flash-msg" class="<%= flash_type(type) %>">
+          <%= msg %>
+        </div>
+      <% end %>
+    </div>
+<% end %>
