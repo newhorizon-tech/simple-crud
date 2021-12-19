@@ -2,26 +2,10 @@
 
 A simple CRUD app for notes
 
-# Technology used 
+# Continous Deployment
 
-- Ruby v2.6.5
-- Ruby on Rails v6.1.4
-- PostgreSQL 
-- Bootstrap 
-  
-# Features 
+- Any changes you push to /development branch will automatically be deployed to  https://crud-my-notes.herokuapp.com
 
-- Display Notes
-- Create Notes
-- Edit Notes
-- Delete Notes  
+# Docker
 
-# Usage instructions 
-
-- Clone repo and go to the root folder 
-- Use `bundle install` to install all dependencies 
-- Create a new database using `rake db:create`
-- Run a database migration `rake db:migrate`
-- Run the rails server `rails server`
-- Viola! 
-
+- A pre-built docker image is available at https://hub.docker.com/r/newhorizontech/simplecrud
