@@ -1,15 +1,19 @@
 FROM ruby:2.6.5
 
-ENV BUNDLE_VERSION 2.2.15
+ARG DEBIAN_FRONTEND=noninteractive
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -\
+  && apt-get update -qq && apt-get install -qq nodejs postgresql-client \
+  && npm install -g yarn@1
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+# RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn
+
 
 WORKDIR /ror-docker
 COPY . /ror-docker
 
 RUN gem install bundler
 RUN bundle install
-RUN yarn install
+RUN npm install
 
 EXPOSE 3000
 

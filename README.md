@@ -1,27 +1,8 @@
-# Notes
+# Notes Docker
 
-A simple CRUD app for notes
-
-# Technology used 
-
-- Ruby v2.6.5
-- Ruby on Rails v6.1.4
-- PostgreSQL 
-- Bootstrap 
-  
-# Features 
-
-- Display Notes
-- Create Notes
-- Edit Notes
-- Delete Notes  
-
-# Usage instructions 
-
-- Clone repo and go to the root folder 
-- Use `bundle install` to install all dependencies 
-- Create a new database using `rake db:create`
-- Run a database migration `rake db:migrate`
-- Run the rails server `rails server`
-- Viola! 
-
+- Install docker and docker-compose
+- Clone this repo
+- Run `docker-compose run web rake db:create` to create a new database
+- Run `docker-compose run web rake db:migrate` to run a migration
+- Run `docker-compose up` to start the server!
+- Go to     
