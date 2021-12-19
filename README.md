@@ -1,9 +1,9 @@
 # Continous Deployment using Github Actions
 
 
-Without Docker - Any changes that are pushed to development branch will automatically be deployed to https://crud-my-notes.herokuapp.com
+**Without Docker** - Any changes that are pushed to development branch will automatically be deployed to https://crud-my-notes.herokuapp.com
 
-With Docker - Any changes that are pushed to [docker branch](https://github.com/newhorizon-tech/simple-crud/tree/docker) will automatically be dockerized and deployed to https://ror-docker.herokuapp.com
+**With Docker** - Any changes that are pushed to [docker branch](https://github.com/newhorizon-tech/simple-crud/tree/docker) will automatically be dockerized and deployed to https://ror-docker.herokuapp.com
 
 
 # Creating a Docker container   
