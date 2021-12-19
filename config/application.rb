@@ -11,6 +11,7 @@ module SimpleCrud
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.hosts << "ror-docker.herokuapp.com"
+    config.webpacker.check_yarn_integrity = false
 
     # Configuration for the application, engines, and railties goes here.
     #

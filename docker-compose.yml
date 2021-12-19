@@ -5,7 +5,7 @@ services:
     image: postgres:13.4
     user: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -19,3 +19,5 @@ services:
       - "3000:3000"
     depends_on:
       - db
+volumes:
+  pg-data:
