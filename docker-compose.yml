@@ -5,12 +5,12 @@ services:
     image: postgres
     user: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-    networks:
-      - railsnetwork
+      - ./tmp/db:/var/lib/postgresql/data:z
     environment:
       POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
   web:
+    image: newhorizontech/simplecrud
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
@@ -19,10 +19,3 @@ services:
       - "3000:3000"
     depends_on:
       - db
-    links:
-      - db:db
-    networks:
-      - railsnetwork
-networks:
-  railsnetwork:
-    driver: bridge  
