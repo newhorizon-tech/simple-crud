@@ -1,10 +1,13 @@
 version: "3.0"
 services:
   db:
+    container_name: db
     image: postgres
     user: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
+    networks:
+      - railsnetwork
     environment:
       POSTGRES_USER: postgres
   web:
@@ -16,3 +19,10 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    links:
+      - db:db
+    networks:
+      - railsnetwork
+networks:
+  railsnetwork:
+    driver: bridge  
