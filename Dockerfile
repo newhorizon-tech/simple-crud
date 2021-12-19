@@ -9,6 +9,7 @@ COPY . /ror-docker
 
 RUN gem install bundler
 RUN bundle install
+RUN yarn install
 
 EXPOSE 3000
 
