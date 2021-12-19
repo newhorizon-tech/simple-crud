@@ -12,8 +12,7 @@
 
 A pre-built docker image of the project is available at https://hub.docker.com/r/newhorizontech/simplecrud. You can pull the image or build it locally using the docker branch. You can use the image with the [docker-compose.yml](https://github.com/newhorizon-tech/simple-crud/blob/docker/docker-compose.yml) to spin up a Docker container. 
 
-After building the container
- 
+- Run `docker-compose build` to build the container
 - Run `docker-compose run web rake db:create` to create a new database
 - Run `docker-compose run web rake db:migrate` to run a migration
 - Run `docker-compose up` to start the server!
