@@ -1,1 +1,6 @@
+/log/*
+/tmp/*
 /node_modules
+/.bundle
+/public/assets
+/_*/

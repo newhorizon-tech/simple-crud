@@ -2,10 +2,10 @@ version: "3.0"
 services:
   db:
     container_name: db
-    image: postgres
+    image: postgres:13.4
     user: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data:z
+      - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
